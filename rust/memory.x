@@ -1,7 +1,8 @@
 MEMORY
 {
-  RAM : ORIGIN = 0x80000000, LENGTH = 1024M /* see DRAM_BASE at https://github.com/riscv/riscv-isa-sim/blob/master/riscv/encoding.h */
+  RAM : ORIGIN = 0x80000A00, LENGTH = 64M /* see DRAM_BASE at https://github.com/riscv/riscv-isa-sim/blob/master/riscv/encoding.h */
   FLASH : ORIGIN = 0x20000000, LENGTH = 1K /* ?? spike -m0x20000000:1024 */
+  HTIF : ORIGIN = 0x80000000, LENGTH = 128
 }
 
 REGION_ALIAS("REGION_TEXT", RAM);
